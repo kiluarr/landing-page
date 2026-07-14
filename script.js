@@ -1,5 +1,167 @@
-document.querySelectorAll("a").forEach(link=>{
-link.addEventListener("click",e=>{
-e.preventDefault();
-});
-});
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#fafafa;
+color:#222;
+line-height:1.6;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(12px);
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#d62828;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#d62828;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+padding:0 8%;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:650px;
+color:white;
+}
+
+.hero h1{
+font-size:64px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:35px;
+}
+
+.hero-button{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 32px;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+transition:.3s;
+}
+
+.merah{
+background:#d62828;
+color:white;
+}
+
+.putih{
+background:white;
+color:#222;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:90px 8%;
+}
+
+section h2{
+font-size:38px;
+margin-bottom:30px;
+text-align:center;
+}
+
+.grid,
+.produk-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.box,
+.produk{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+text-align:center;
+}
+
+.box:hover,
+.produk:hover{
+transform:translateY(-8px);
+}
+
+footer{
+background:#111;
+color:white;
+padding:30px;
+text-align:center;
+margin-top:60px;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+  }
